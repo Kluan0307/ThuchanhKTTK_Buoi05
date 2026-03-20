@@ -1,0 +1,12 @@
+2. Xác định Bounded Context
+    - Catalog Context: Hiển thị món ăn và nhà hàng
+    - Ordering Context: Quy trình tạo và hủy đơn
+    - Billing Context: Giao dịch tiền tệ
+    - Delivery Context: Điều phối tài xế và lộ trình
+
+3. Giao tiếp sync vs Async giưa các service
+    - Synchronous (Đồng bộ - REST/gRPC): * Sử dụng khi: Cần phản hồi ngay lập tức.
+    - Asynchronous (Bất đồng bộ - Message Broker): * Sử dụng khi: Các tác vụ tốn thời gian hoặc không cần chờ kết quả ngay (để tăng hiệu năng).
+
+4. Event Messaging Design
+    - Mô hình này giúp các service "nói chuyện" với nhau mà không cần biết nhau là ai (Loose Coupling).

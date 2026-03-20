@@ -1,0 +1,60 @@
+:root {
+  /* Giữ nguyên các biến màu sắc (variables) của bạn */
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --accent: #aa3bff;
+  --shadow: rgba(0, 0, 0, 0.05) 0 10px 15px -3px;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  
+  font-size: 16px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+}
+
+#root {
+  /* XÓA BỎ max-width và width cũ */
+  width: 100%; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  /* XÓA BỎ border-inline (cái này tạo ra 2 vạch kẻ 2 bên) */
+  border-inline: none; 
+  
+  box-sizing: border-box;
+}
+
+/* Container cho nội dung bên trong để không bị sát mép màn hình quá */
+.app-content {
+  width: 100%;
+  max-width: 1400px; /* Giới hạn nhẹ để nội dung không quá loãng trên màn hình 4K */
+  margin: 0 auto;
+  padding: 0 24px; /* Tạo khoảng trống nhẹ ở 2 bên mép */
+}
+
+/* Các tinh chỉnh Header cho giao diện Full Screen */
+h1 {
+  font-family: var(--sans);
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Tự động co giãn theo màn hình */
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 40px 0;
+  text-align: center;
+}

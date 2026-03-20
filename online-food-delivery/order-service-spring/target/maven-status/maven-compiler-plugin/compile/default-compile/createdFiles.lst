@@ -1,0 +1,3 @@
+com\food\order\config\RabbitMQConfig.class
+com\food\order\controller\OrderController.class
+com\food\order\OrderApplication.class
